@@ -85,7 +85,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
 -- Set shell program as powershell
-if vim.fn.has 'win32' then
+if vim.fn.has 'win32' == 1 then
   vim.o.shell = 'powershell'
 end
 
