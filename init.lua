@@ -89,6 +89,8 @@ if vim.fn.has 'win32' then
   vim.o.shell = 'powershell'
 end
 
+-- Set shiftwidth
+vim.opt.shiftwidth = 2
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
