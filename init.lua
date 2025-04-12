@@ -166,6 +166,9 @@ vim.opt.scrolloff = 10
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- expand errors to float
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Expand to float' })
+
 vim.keymap.set('n', 'q', '<C-v>')
 
 -- Clear highlights on search when pressing <Esc> in normal mode
@@ -993,4 +996,3 @@ require('lazy').setup({
     },
   },
 })
-
