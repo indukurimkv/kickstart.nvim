@@ -169,7 +169,7 @@ vim.opt.scrolloff = 10
 -- expand errors to float
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Expand to float' })
 
-vim.keymap.set('n', 'q', '<C-v>')
+-- vim.keymap.set('n', 'q', '<C-v>')
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -279,8 +279,11 @@ require('lazy').setup({
     -- tag = "v2.15", -- uncomment to pin to a specific release
     init = function()
       -- VimTeX configuration goes here, e.g.
-      vim.g.vimtex_view_method = 'zathura'
+      -- vim.g.vimtex_view_method = 'zathura'
       vim.g.maplocalleader = ','
+      -- Set okular as default viewer for vimtex
+      vim.g.vimtex_view_general_viewer = 'okular'
+      vim.g.vimtex_view_general_options = '--unique file:@pdf#src:@line@tex'
     end,
   },
   {
